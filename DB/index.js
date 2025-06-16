@@ -2,7 +2,7 @@ const { LRUCache } = require('lru-cache');
 const mongoose = require('mongoose');
 const logError = require('../logs/index');
 
-const LINK = process.env.MONGO_URI;
+const LINK = process.env.DB_URL;
 const MaxConnection = isNaN(Number(process.env.MAX_CONNECTION)) ? 5 : Number(process.env.MAX_CONNECTION);
 const TimeToLive = isNaN(Number(process.env.TTL)) ? 1 : Number(process.env.TTL);
 const MaxPoolSize = isNaN(Number(process.env.MAX_POOL_SIZE)) ? 10 : Number(process.env.MAX_POOL_SIZE);

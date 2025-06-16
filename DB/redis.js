@@ -81,7 +81,7 @@ const deleteAllRedisKeysWithApiSuccess = async (gameCount) => {
     console.error('Error accessing Redis:', err);
   }
 };
-const redisDb = process.env.DbName;
+const redisDb = process.env.DB_NAME;
 
 logger.info(`Connected to redis on the port ${process.env.REDIS_PORT} and database name is ${redisDb}`);
 
