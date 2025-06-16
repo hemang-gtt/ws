@@ -145,12 +145,12 @@ const verifySingleSession = async (userId, token, wsId) => {
 
       console.log('ws data going is ------------', wsData);
       console.log('userID is --------', userId, token);
-      const basePath = process.env.BASE_PATH;
+      const basePath = process.env.API_BASE_PATH;
       let url;
       if (basePath === '') {
-        url = `${process.env.INTERNAL_API_URL}/${process.env.BASE_PATH}getBalance`;
+        url = `${process.env.INTERNAL_API_URL}/${process.env.API_BASE_PATH}getBalance`;
       } else {
-        url = `${process.env.INTERNAL_API_URL}/${process.env.BASE_PATH}/getBalance`;
+        url = `${process.env.INTERNAL_API_URL}/${process.env.API_BASE_PATH}/getBalance`;
       }
 
       console.log('url is -----------', url);
